@@ -479,8 +479,10 @@ public:
 
     mat operator=(mat<ValueType, DIM> m)
     {
-        for (int i = 0; i < DIM; i++)
+        for (int i = 0; i < DIM; i++) {
             _matrix[i] = m[i];
+        }
+        return *this;
     }
 
     mat()
